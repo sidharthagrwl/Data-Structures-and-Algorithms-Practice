@@ -33,13 +33,13 @@ class Solution
         // Code here
         String str = n + "";
         
-        for(int i=0;i<str.length();i++) {
-            int a = 0;
-            int b = str.length()-1;
-            
-            if(str.charAt(a) != str.charAt(b)) return "No";
-         }
-         
-         return "Yes";
+        int i=0;
+        int j=str.length()-1;
+        
+        while(i<j) {
+            if(str.charAt(i++) != str.charAt(j--)) return "No";
+        }
+        
+        return "Yes";
     }
 }
